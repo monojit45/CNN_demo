@@ -200,7 +200,7 @@ dummy = input("Press ENTER to continue")
 
 ############## Define loss for one batch of training examples
 
-loss_cross_entropy = tf.reduce_mean(tf.nn.softmax_cross_entropy_with_logits(labels=y_, logits=y_network))
+loss_cross_entropy = tf.reduce_mean(tf.nn.softmax_cross_entropy_with_logits_v2(labels=y_, logits=y_network))
 # tf.nn.softmax_cross_entropy_with_logits first convert the "logits" argument to probabilities internally
 # ==> no need to explicitly define a final softmax layer
 
